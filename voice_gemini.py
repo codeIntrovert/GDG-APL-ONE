@@ -1,8 +1,8 @@
-import speech_recognition as sr
 from google import genai
 from google.genai import types
 import library.keys as keys
 from library.lib_functions import speak
+from library.lib_functions import listen
 # Initialize Google Gemini API
 client = genai.Client(api_key=keys.load_key())
 model_name = "gemini-2.0-flash"
@@ -20,34 +20,9 @@ generate_content_config = types.GenerateContentConfig(
 
 chat_history = []
 
-# Initialize speech recognition
-recognizer = sr.Recognizer()
-
-
-
-def listen():
-    """
-    Uses Google Cloud regonition + gemini
-    alexa prototype
-    Uses pyttsx3 for text to speech
-    """
-    with sr.Microphone() as source:
-        print("\nListening...")
-        #recognizer.adjust_for_ambient_noise(source)
-        try:
-            audio = recognizer.listen(source, phrase_time_limit=30)
-            text = recognizer.recognize_google(audio, language='en-US')
-            print("You:", text)
-            return text
-        except sr.UnknownValueError:
-            print("Couldn't understand, please repeat...")
-            return None
-        except sr.RequestError:
-            print("Speech recognition error, check internet connection.")
-            return None
-
 def chat():
     while True:
+        #user_input = input("\nYou: ")
         user_input = listen()
         if not user_input:
             continue
