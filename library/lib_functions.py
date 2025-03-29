@@ -3,7 +3,9 @@ from ai_speech import speak
 #to search, will ask search query at the time of execution
 
 
-
+"""
+OLD CODE, NEEDS REFORMATTING
+"""
 
 def music():
     print("Now Playing... My Ordinary Life")
