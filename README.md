@@ -2,13 +2,13 @@
 
 This project provides both **voice-based** and **text-based** AI assistants using **Google's Gemini API**. The AI-powered assistants can process user input via text or speech and generate intelligent responses.
 
-## **Features**
+## **Skill Tags**
+Python, APIs, Google Gemini API, AI, Voice Recognition, Speech-to-Text, Text-to-Speech (TTS), Voice Assistant, Automation, Speech Synthesis
 
-✅ Text-based AI chat assistant  
-✅ Voice-based AI assistant  
-✅ Uses Google's **Gemini API** for responses  
-✅ Lightweight and easy to set up  
-✅ Python-based with minimal dependencies
+## **Relevant Links**
+
+Visual Studio Code: https://code.visualstudio.com/
+Python: https://www.python.org/downloads/
 
 ---
 
@@ -18,7 +18,7 @@ Follow these steps to set up and run the project on your local machine.
 
 ### **1. Clone the Repository**
 
-First, download the project from the GitHub repository:
+First, clone or download the project from the GitHub repository:
 
 ```bash
  git clone https://github.com/your-repo/alexa-clone.git
@@ -111,6 +111,12 @@ py voice_gemini.py
 
 ### **Common Issues and Fixes**
 
+#### Running Scripts is disabled on this machine
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 #### ❌ `ModuleNotFoundError: No module named 'xyz'`
 
 ✅ Ensure you've installed all dependencies:
@@ -133,23 +139,13 @@ py -m text_gemini
 ✅ Ensure your internet connection is working.
 
 ---
+## **Features**
 
-## **Contributing**
-
-We welcome contributions! To contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Commit your changes (`git commit -m "Added new feature"`)
-4. Push to the branch (`git push origin feature-name`)
-5. Open a Pull Request
-
----
-
-## **License**
-
-This project is licensed under the **MIT License**. Feel free to modify and distribute it.
-
+✅ Text-based AI chat assistant  
+✅ Voice-based AI assistant  
+✅ Uses Google's **Gemini API** for responses  
+✅ Lightweight and easy to set up  
+✅ Python-based with minimal dependencies
 ---
 
 ## **Acknowledgments**
