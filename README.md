@@ -22,8 +22,8 @@ Follow these steps to set up and run the project on your local machine.
 First, clone or download the project from the GitHub repository:
 
 ```bash
- git clone https://github.com/your-repo/alexa-clone.git
- cd alexa-clone
+ git clone https://github.com/codeIntrovert/GDG-APL-ONE
+ cd GDG-APL-ONE
 ```
 
 ### **2. Get a Free Gemini API Key**
