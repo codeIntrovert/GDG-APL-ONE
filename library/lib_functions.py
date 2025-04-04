@@ -1,32 +1,42 @@
 import os
-from ai_speech import speak
-#to search, will ask search query at the time of execution
+from .ai_speech import speak
+import webbrowser
+import sys
+import requests
 
+def open_youtube():
+    speak("Opening YouTube")
+    webbrowser.open("https://www.youtube.com")
 
-"""
-OLD CODE, NEEDS REFORMATTING
-"""
+def open_spotify():
+    speak("Opening Spotify")
+    webbrowser.open("https://open.spotify.com")
 
-def music():
-    print("Now Playing... My Ordinary Life")
-    led = "C:\\Users\\Hasan Imam\\Music\\My Ordinary Life-The Living Tombstone-9Zj0JOHJR-s.m4a"
-    os.startfile(led)
-    return
+def google_search(query):
+    speak(f"Searching Google for {query}")
+    webbrowser.open(f"https://www.google.com/search?q={query}")
 
+def get_weather():
+    speak("Fetching weather information")
+    city = "New York"  # Change to your city or make it dynamic
+    api_key = "your_openweather_api_key"  # Replace with your API key
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+    response = requests.get(url).json()
+    if response.get("main"):
+        temp = response["main"]["temp"]
+        return f"The current temperature in {city} is {temp}°C."
+    return "Weather information not available."
 
-def open_application(query):
-    if "browser" in query:
-        speak("Opening Microsoft Edge")
-        os.startfile("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe")
-        return
-    elif "code" in query:
-        speak("Opening Visual Studio")
-        os.startfile('"C:\\Users\\Hasan Imam\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"')
-        return
-    elif "spotify" in query:
-        speak("Spotify")
-        os.startfile("C:\\Users\\Hasan Imam\\Desktop\\Spotify.lnk")
-        return
-    else:
-        speak("Application not available")
-        return
+def control_system(command):
+    if "shutdown" in command:
+        speak("Shutting down the system")
+        if sys.platform == "win32":
+            os.system("shutdown /s /t 1")
+        else:
+            os.system("sudo shutdown now")
+    elif "restart" in command:
+        speak("Restarting the system")
+        if sys.platform == "win32":
+            os.system("shutdown /r /t 1")
+        else:
+            os.system("sudo reboot")
