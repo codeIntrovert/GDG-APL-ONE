@@ -3,6 +3,7 @@
 This project provides both **voice-based** and **text-based** AI assistants using **Google's Gemini API**. The AI-powered assistants can process user input via text or speech and generate intelligent responses.
 
 ## **Skill Tags**
+
 Python, APIs, Google Gemini API, AI, Voice Recognition, Speech-to-Text, Text-to-Speech (TTS), Voice Assistant, Automation, Speech Synthesis
 
 ## **Relevant Links**
@@ -96,10 +97,9 @@ py voice_gemini.py
 ```
 📂 alexa-clone
 ├── 📂 env/                 # Virtual environment (ignored in .gitignore)
-├── 📂 library/                 # Helper modules
-├── 📂 audios/              # Audio processing files
+├── 📂 library/             # Helper modules
 ├── 📜 text_gemini.py       # Text-based AI assistant
-├── 📜 voice_gemini.py      # Voice-based AI assistant
+├── 📜 voice_gemini.py      # Voice-based AI assistant (final outcome)
 ├── 📜 requirements.txt     # Required dependencies
 ├── 📜 .env                 # API key storage (not committed to Git)
 └── 📜 README.md            # Documentation
@@ -111,7 +111,7 @@ py voice_gemini.py
 
 ### **Common Issues and Fixes**
 
-#### Running Scripts is disabled on this machine
+#### ❌ `Running Scripts is disabled on this machine`
 
 ```bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -139,6 +139,7 @@ py -m text_gemini
 ✅ Ensure your internet connection is working.
 
 ---
+
 ## **Features**
 
 ✅ Text-based AI chat assistant  
@@ -146,6 +147,7 @@ py -m text_gemini
 ✅ Uses Google's **Gemini API** for responses  
 ✅ Lightweight and easy to set up  
 ✅ Python-based with minimal dependencies
+
 ---
 
 ## **Acknowledgments**
